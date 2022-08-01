@@ -1,50 +1,12 @@
-<img src="https://cdn.eleflow.com.br/ef-web/wp-content/uploads/2016/08/21181642/Eleflow.png" alt="Eleflow BigData" width="200"/>
+# ETL
+Para executar pyspark e jupyter notebook, usamos docker, da pasta docker/ . Nela existem os scripts que geram o notebook em que poderá ser executado o código, por meio da porta 8889, ou seja, em http://localhost:8889. Caso seja preciso, o token de login fica no terminal, no url do jupyter notebook gerado dentro do container de docker.
 
-# Data engineering capstone
+Para a parte de SQL, foi utilizado o Hive do Spark. Os pacotes de python estão em src/requirements.txt, e pode ser instalado por pip install -r src/requirements.txt . Para chave de api https://rapidapi.com/Active-api/api/airport-info/ para pegar os dados, ela foi guardada em arquivo .env, e é exemplificada por .env.example.
 
-## BigData Airlines
+Utilizei de requisição GET assíncrona, a fim de fazer o scrapping dos dados sem o servidor negar serviço.
 
-A Eleflow irá atender um novo cliente, a _BigData Airlines_, e você será o engenheiro de dados responsável por fazer a ingestão de dados e preparar algumas tabelas para os cientistas de dados e analistas de dados. 
+Comentários foram adicionados.
 
-### Capstone
+Em src/, tem o script create_cronjob_etl.sh, um cronjob para crontab de Linux (que pode ser executado por notebook de Databricks usando a mágica %sh na célula). Está configurado para executar o notebook etl.ipynb todo início de mês.
 
-- Carregar os dados de VRA
-  - Normalizar o cabeçalho para snake case
-  - Salvar estes dados
-- Carregar dos dados de AIR_CIA
-  - Normalizar o cabeçalho para snake case
-  - Separar a coluna 'ICAO IATA' em duas colunas, seu conteúdo está separado por espaço e pode não conter o código IATA, caso não contenha o código IATA, deixe o valor nulo.
-  - Salvar estes dados
-- Criar nova tabela aerodromos
-  - Através da API [https://rapidapi.com/Active-api/api/airport-info/]() trazer os aeródramos através do código ICAO presente nos dados de VRA.
-  - Salvar estes dados
-- Criar as seguintes views (Priorize o uso de SQL para esta parte):
-  - Para cada companhia aérea trazer a rota mais utilizada com as seguintes informações:
-    - Razão social da companhia aérea
-    - Nome Aeroporto de Origem
-    - ICAO do aeroporto de origem
-    - Estado/UF do aeroporto de origem
-    - Nome do Aeroporto de Destino
-    - ICAO do Aeroporto de destino
-    - Estado/UF do aeroporto de destino
-  - Para cada aeroporto trazer a companhia aérea com maior atuação no ano com as seguintes informações:
-    - Nome do Aeroporto
-    - ICAO do Aeroporto
-    - Razão social da Companhia Aérea
-    - Quantidade de Rotas à partir daquele aeroporto
-    - Quantidade de Rotas com destino àquele aeroporto
-    - Quantidade total de pousos e decolagens naquele aeroporto
-
-#### Extras:
-  - Descrever qual estratégia você usaria para ingerir estes dados de forma incremental caso precise capturar esses dados a cada mes?
-  - Justifique em cada etapa sobre a escalabilidade da tecnologia utilizada.
-  - Justifique as camadas utilizadas durante o processo de ingestão até a disponibilização dos dados.
-
-#### Observações:
-   - Você pode utilizar a tecnologia de sua preferência ou seguir a recomendação:
-     - Notebooks Jupyter
-     - Google Colab
-     - Databricks Community
-   - Pode incluir comentários sobre a abordagem de extração/transformação que você está fazendo
-   - Pode disponibilizar o projeto via Git, URL ou .zip
-# etlExample
+A escolha por docker foi por ele permitir um compartilhamento melhor, seja por causa de problemas de dependencias que o python possa vir a ter, seja por poder levar a imagem ao dockerhub, ou a qualquer nuvem, seja ela gerenciada ou on-premise. E isto torna a solução mais flexível e escalável.

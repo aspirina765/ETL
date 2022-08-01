@@ -1,0 +1,14 @@
+id,iata,icao,name,location,street_number,street,city,county,state,country_iso,country,postal_code,phone,latitude,longitude,uct,website,error
+4386.0,LTG,VNLT,Langtang Airport,"Langtang, Nepal",,,,,,,,,,0.0,0.0,0.0,,
+388.0,ASO,HASO,Asosa Airport,"Asosa, Ethiopia",,5,,Asosa,Benishangul-Gumuz,ET,Ethiopia,,,10.023081,34.57845,180.0,,
+7077.0,SUL,OPSU,Sui Airport,"Sui, Pakistan",,Airport Road,Sui,Dera Bugti,Balochistan,PK,Pakistan,,,28.645142,69.17692,300.0,http://www.caapakistan.com.pk/,
+34.0,ABJ,DIAP,Port Bouet Airport (Felix Houphouet Boigny Int'l),"Abidjan, Côte d'Ivoire",,,Abidjan,Abidjan,Abidjan,CI,Côte d'Ivoire,,+225 21 75 79 00,5.2544694,-3.9296293,0.0,http://www.aeria-ci.com/,
+62.0,ACN,MMCC,Ciudad Acuña International Airport,"Ciudad Acuña, Coahuila, Mexico",,,,,Coahuila,MX,Mexico,,+52 877 112 3267,29.33478,-101.09653,-300.0,,
+,,,,,,,,,,,,,,,,,,{'text': 'No airport found'}
+2600.0,GLO,EGBJ,Gloucestershire Airport,"Gloucester / Cheltenham, England, United Kingdom",,,Staverton,Gloucestershire,England,GB,United Kingdom,GL51 6SR,+44 1452 857700,51.89292,-2.1577797,60.0,http://www.gloucestershireairport.co.uk/,
+5770.0,PAM,KPAM,Tyndall Air Force Base,"Panama City, Florida, United States",,,Tyndall Air Force Base,Bay County,Florida,US,United States,32403,,30.080008,-85.607506,-300.0,,
+5045.0,MWM,KMWM,Windom Municipal Airport,"Windom, Minnesota, United States",48572,County Road 44,Windom,Cottonwood County,Minnesota,US,United States,56101,+1 507-831-6120,43.9086,-95.109436,-300.0,https://www.windom-mn.com/city-facilities/windom-municipal-airport/,
+6131.0,PTB,KPTB,Dinwiddie County Airport,"Petersburg, Virginia, United States",,,Petersburg,Dinwiddie County,Virginia,US,United States,23803,+1 804-861-0218,37.185238,-77.50037,-240.0,http://www.ptbairport.com/,
+6778.0,SID,GVAC,Amílcar Cabral International Airport,"Sal, Cape Verde",,Aeroporto Internacional Amílcar Cabral,Espargos,,Sal,CV,Cape Verde,4110,+238 241 14 68,16.73458,-22.943975,-60.0,http://www.asa.cv/index.php?option=com_content&view=article&id=137&Itemid=58,
+7219.0,TAM,MMTM,General Francisco Javier Mina International Airport,"Tampico, Tamaulipas, Mexico",1001,Adolfo López Mateos,Tampico,,Tamaulipas,MX,Mexico,89339,+52 833 478 7000,22.289577,-97.869,-300.0,,
+7625.0,TTL,,Turtle Island Seaplane Base,"Nanuya Levu, Fiji",,,,,,,,,,0.0,0.0,0.0,,
